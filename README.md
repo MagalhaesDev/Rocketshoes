@@ -30,32 +30,30 @@ Here are the technologies used in this project.
 
 ### 1 - This is the main page of the project <3 
 
-![Homepage image](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/home.png)
+![Homepage image](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/home2.png)
 
 ### 2 - Cart 
 
-This cart component has the intention of storing the selected items and their quantity, all this integration is done with a communication from the client with the server where the search for the selected items and their stock is done, having several rules to be applied,  as the quantity not being greater than the stock, if the item really exists, among others.
+* This cart component has the intention of storing the selected items and their quantity, all this integration is done with a communication from the client with the server where the search for the selected items and their stock is done, having several rules to be applied,  as the quantity not being greater than the stock, if the item really exists, among others.
 
-![Cart](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/cart.png)
+![Cart](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/cart2.png)
 
-### Show todos
+### React toastify
 
-* This functionality is of type GET and will display to the client the lists created by the user, passing through a middleware that will check if it is an existing account, if not it will return the status 404(not found).
+* We used the toastify react to display error messages to the user when some rule did not occur as expected. In this example below we see a message when the user tries to place more items than are in stock.
 
-### Update todo
+![Toastify](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/toast.png)
 
-* allows you to update the name and end date of todo. giving the code 400 (bad request) if the user is non-existent, and returning a JSON if everything is fine.
+### API
 
-### Completed task
+* In the following images, we can see the API used to query the data, with which we can query both the product details and its quantity in stock.
 
-* This feature will set the todo to completed, returning the JSON of the task.
+![API](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/products.png)
 
-### Delete todo 
-
-* This functionality of the HTTP delete method, will delete an existing todo, if all goes well it will return a JSON with the todo that remain, otherwise a 404 (Not Found) if the user does not exist.
+![API](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/stock.png)
 
 ## Links
-  - Repository: https://github.com/MagalhaesDev/Todo-nodeJs
+  - Repository: https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras
     - In case of sensitive bugs like security vulnerabilities, please contact
       mateusmagalhaesemidio@gmail.com directly instead of using issue tracker. We value your effort
       to improve the security and privacy of this project!
