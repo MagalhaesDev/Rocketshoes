@@ -38,13 +38,13 @@ Here are the technologies used in this project.
 
 ![Cart](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/cart2.png)
 
-### React toastify
+### 3 - React toastify
 
 * We used the toastify react to display error messages to the user when some rule did not occur as expected. In this example below we see a message when the user tries to place more items than are in stock.
 
 ![Toastify](https://github.com/MagalhaesDev/Criando-um-hook-de-carrinhos-de-compras/blob/master/src/readme/toast.png)
 
-### API
+### 4 - API
 
 * In the following images, we can see the API used to query the data, with which we can query both the product details and its quantity in stock.
 
