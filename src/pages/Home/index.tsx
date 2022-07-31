@@ -34,11 +34,13 @@ const Home = (): JSX.Element => {
 
   useEffect(() => {
     async function loadProducts() {
-      const products = await api.get<Product[]>("/products");
-      const data = products.data.map((product) => ({
+      const products = await api.get("/products");
+      const data = products.data.products.map((product: Product) => ({
         ...product,
         priceFormatted: formatPrice(product.price),
       }));
+
+
 
       setProducts(data);
     }
@@ -49,6 +51,8 @@ const Home = (): JSX.Element => {
   function handleAddProduct(id: number) {
     addProduct(id);
   }
+
+
 
   return (
     <ProductList>

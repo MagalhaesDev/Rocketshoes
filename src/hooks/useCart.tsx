@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { api } from "../services/api";
-import { Product } from "../types";
+import { Product, Stock } from "../types";
 
 interface CartProviderProps {
   children: ReactNode;
@@ -39,9 +39,14 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
         (product: Product) => product.id === productId
       );
 
-      const stock = await api.get(`stock/${productId}`);
+      const stocks = await api.get('stocks');
+      const stockItem = stocks.data.stocks.find((item: Stock) => item.id === productId)
 
-      const stockAmount = stock.data.amount;
+
+      const stockAmount = stockItem.amount;
+
+
+
       const currentAmount = productExists ? productExists.amount : 0;
       const amount = currentAmount + 1;
 
@@ -53,10 +58,11 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       if (productExists) {
         productExists.amount = amount;
       } else {
-        const product = await api.get(`products/${productId}`);
+        const products = await api.get(`products`);
+        const productItem = products.data.products.find((item: Product) => item.id === productId)
 
         const newProduct = {
-          ...product.data,
+          ...productItem,
           amount: 1,
         };
 
@@ -94,9 +100,10 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
     amount,
   }: UpdateProductAmount) => {
     try {
-      const stock = await api.get(`stock/${productId}`);
+      const stocks = await api.get(`stocks`);
+      const stockItem = stocks.data.stocks.find((item: Stock) => item.id === productId)
 
-      const stockAmount = stock.data.amount;
+      const stockAmount = stockItem.amount;
 
       if (amount <= 0) return;
 
