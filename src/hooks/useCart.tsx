@@ -40,7 +40,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       );
 
       const stocks = await api.get('stocks');
-      const stockItem = stocks.data.stocks.find((item: Stock) => item.id === productId)
+      const stockItem = stocks.data.find((item: Stock) => item.id === productId)
 
 
       const stockAmount = stockItem.amount;
@@ -59,7 +59,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
         productExists.amount = amount;
       } else {
         const products = await api.get(`products`);
-        const productItem = products.data.products.find((item: Product) => item.id === productId)
+        const productItem = products.data.find((item: Product) => item.id === productId)
 
         const newProduct = {
           ...productItem,
@@ -101,7 +101,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
   }: UpdateProductAmount) => {
     try {
       const stocks = await api.get(`stocks`);
-      const stockItem = stocks.data.stocks.find((item: Stock) => item.id === productId)
+      const stockItem = stocks.data.find((item: Stock) => item.id === productId)
 
       const stockAmount = stockItem.amount;
 
