@@ -18,7 +18,7 @@ Here are the technologies used in this project.
 
 * Github.
 
-## Getting started
+### Getting started
  
 1 - Run the command yarn in the terminal to download the dependencies.
 
