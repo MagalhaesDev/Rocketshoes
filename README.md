@@ -4,7 +4,7 @@
 
 This application was developed in order to build a tennis store, with a shopping cart for selected items. Using react, typescript, and other cutting edge technologies.
 
-## Technologys
+## Technologys.
 
 
 Here are the technologies used in this project.
