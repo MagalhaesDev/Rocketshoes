@@ -7,7 +7,7 @@ This application was developed in order to build a tennis store, with a shopping
 ## Technologys.
 
 
-Here are the technologies used in this project.
+Here are the technologies used in this project
 
 * React 17.0.1
 * Typescript 4.1.2
